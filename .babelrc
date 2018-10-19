@@ -1,0 +1,26 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }]
+  ],
+  "plugins": [
+//    "transform-vue-jsx",
+    ////    "babel-plugin-transform-async-to-generator",
+    ////    "babel-plugin-external-helpers",
+    ////    "transform-runtime",
+    ////    "babel-plugin-transform-es2015-modules-commonjs",
+    ////    "syntax-dynamic-import",
+    ////    [
+    ////      "component",
+    ////      {
+    ////        "libraryName": "element-ui",
+    ////        "styleLibraryName": "theme-chalk"
+    ////      }
+    ////    ]
+  ]
+}
+

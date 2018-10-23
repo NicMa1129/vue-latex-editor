@@ -27,11 +27,11 @@ module.exports = merge(baseWebpackConfig, {
     })
   },
   optimization: {
-    minimize: true
+    minimize: false
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname, '../') }),
-    new uglifyjsWebpackPlugin(),
+    // new uglifyjsWebpackPlugin(),
     new ExtractTextPlugin("latexEditor.css"),
     new OptimizeCSSPlugin({
       cssProcessorOptions: { safe: true }

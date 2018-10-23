@@ -52,9 +52,9 @@
 import {
   isObject,
   ObjectToStr,
-  getUniqArray,
-  delObject
+  getUniqArray
 } from '../utils'
+import config from '../config/data'
 
 export default {
   name: 'LatexEditor',
@@ -62,7 +62,7 @@ export default {
     return {
       mainData: [],
       showTool: false,
-      showBar: true
+      showBar: false
     }
   },
   props: {
@@ -74,8 +74,7 @@ export default {
       type: Array
     },
     formulas: {
-      type: Object,
-      required: true
+      type: Object
     },
     edit: {
       type: Function
@@ -102,7 +101,8 @@ export default {
   methods: {
     initData(){
       const uniqFormulas = []
-      const formulasArr = Object.entries(this.formulas)
+      const formulas = this.formulas ? Object.assign({}, config.formulas, this.formulas) : config.formulas
+      const formulasArr = Object.entries(formulas)
 
       for(const [ key, v ] of formulasArr){
         const ext = uniqFormulas.find(item => item.key === key)
@@ -333,6 +333,7 @@ export default {
       }
       .latex-editer__meta-sel-inner {
         display: table;
+        width: 100%;
         height: 100%;
         margin: 0 auto;
         text-align: center;

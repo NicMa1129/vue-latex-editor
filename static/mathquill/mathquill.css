@@ -516,7 +516,7 @@
   filter: progid:DXImageTransform.Microsoft.Chroma(color='white');
   margin-top: -0.1em;
 }
-div[class^="matheditor-toolbar-"] .mq-root-block .mq-matrix {
+.latex-editer__meta-wrap .mq-root-block .mq-matrix {
   transform: scale(.5, .5);
 }
 .meta-sel__inner .mq-root-block {

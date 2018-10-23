@@ -23,19 +23,8 @@ const getUniqArray = arr => {
   return res
 }
 
-const delObject = (key, obj) => {
-  const res = Object.create()
-
-  for(const [ k, v ] of obj){
-    if(k !== key) res[k] = v
-  }
-
-  return res
-}
-
 export {
   isObject,
   ObjectToStr,
-  getUniqArray,
-  delObject
+  getUniqArray
 }

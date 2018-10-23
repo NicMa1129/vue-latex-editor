@@ -1,6 +1,7 @@
 import Vue from 'vue'
+// import LatexEditor from '../src/index'
 import '../dist/latexEditor.css'
-import LatexEditor from '../src/index'
+import LatexEditor from '../dist/latexEditor'
 import App from './App'
 
 Vue.use(LatexEditor)

@@ -1033,7 +1033,7 @@ function getInterface(v) {
         if (this.__controller.blurred) this.__controller.cursor.hide().parent.blur();
         return this;
       }
-      // console.log('asdasd',latex)
+      console.log('asdasd',latex)
       return this.__controller.exportLatex();
     };
     _.html = function() {
@@ -2075,7 +2075,7 @@ var latexMathParser = (function() {
 
 Controller.open(function(_, super_) {
   _.exportLatex = function() {
-    // console.log('this.root.latex()',this.root.latex())
+    console.log('this.root.latex()',this.root.latex())
     return this.root.latex().replace(/(\\[a-z]+) (?![a-z])/ig,'$1');
   };
   _.writeLatex = function(latex) {
@@ -4270,7 +4270,7 @@ for (var prop in transformPropNames) {
 
 if (transformPropName) {
   scale = function(jQ, x, y) {
-    // jQ.css(transformPropName, 'scale('+x+','+y+')');
+    jQ.css(transformPropName, 'scale('+x+','+y+')');
   };
 }
 else if ('filter' in div_style) { //IE 6, 7, & 8 fallback, see https://github.com/laughinghan/mathquill/wiki/Transforms
@@ -5155,7 +5155,8 @@ Environments.matrix = P(Environment, function(_, super_) {
     var blockjQ = this.jQ.children('table');
 
     var height = blockjQ.outerHeight()/+blockjQ.css('fontSize').slice(0,-2);
-
+    console.log(blockjQ)
+    console.log(blockjQ.outerHeight())
     var parens = this.jQ.children('.mq-paren');
     if (parens.length) {
       scale(parens, min(1 + .2*(height - 1), 1.2), 1.05*height);

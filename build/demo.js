@@ -50,6 +50,6 @@ module.exports = merge(baseWebpackConfig, {
       template: 'demo/index.html',
       inject: true,
       // favicon: utils.resolve('favicon.ico'),
-    }),
+    })
   ]
 })

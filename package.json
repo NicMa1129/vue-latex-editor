@@ -8,7 +8,7 @@
     "dist": "webpack --mode production --progress --env=dist",
     "demo": "webpack-dev-server --mode development --env=demo"
   },
-  "author": "",
+  "author": "amazingnic1129@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.2.1",
